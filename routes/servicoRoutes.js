@@ -13,6 +13,4 @@ router.post('/', _routeController.post)
 router.put('/:id', _routeController.put)
 router.delete('/:id', _routeController.delete)
 
-module.exports = {
-    routes: router
-}
+module.exports = router
