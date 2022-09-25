@@ -18,8 +18,8 @@ class colaboradorRepository {
 
     async update(id, data) { 
         try {                   
-            let trainer = await firestore.collection('colaboradores').doc(id);
-            let res = await trainer.update(data);
+            let colaborador = await firestore.collection('colaboradores').doc(id);
+            let res = await colaborador.update(data);
             return res;
         } catch(error){
             return error.message
@@ -42,8 +42,8 @@ class colaboradorRepository {
 
     async getById(id) {
         try{
-            let trainer = await firestore.collection('colaboradores').doc(id);
-            let res = await trainer.get();
+            let colaborador = await firestore.collection('colaboradores').doc(id);
+            let res = await colaborador.get();
             return res.data()
         } catch(error){
             return error.message

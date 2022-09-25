@@ -18,8 +18,8 @@ class animalRepository {
 
     async update(id, data) { 
         try {                   
-            let trainer = await firestore.collection('animais').doc(id);
-            let res = await trainer.update(data);
+            let animal = await firestore.collection('animais').doc(id);
+            let res = await animal.update(data);
             return res;
         } catch(error){
             return error.message
@@ -42,8 +42,8 @@ class animalRepository {
 
     async getById(id) {
         try{
-            let trainer = await firestore.collection('animais').doc(id);
-            let res = await trainer.get();
+            let animal = await firestore.collection('animais').doc(id);
+            let res = await animal.get();
             return res.data()
         } catch(error){
             return error.message
