@@ -1,14 +1,10 @@
-// definindo o strict mode do JS
 "use strict"
 
-// realizando as importações
 const dotenv = require("dotenv");
 const assert = require("assert");
 
-// configurando o dotenv
 dotenv.config();
 
-// criando o objeto que irá conter as variáveis de ambiente
 const {
     PORT,
     HOST,
@@ -21,11 +17,9 @@ const {
     APP_ID
 } = process.env;
 
-// definindo obrigatoriedade de parâmetros
 assert(PORT, "PORT is required!");
 assert(HOST, "HOST is required!");
 
-// exportando o módulo
 module.exports = {
     port: PORT,
     host: HOST,
